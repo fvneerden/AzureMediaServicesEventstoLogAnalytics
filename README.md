@@ -125,9 +125,15 @@ Let's verify once more, go the the Logic App and click on "Logic app designer"
 It should look like the picture above.
 
 
+![](src/26.png)
+
+
+When we have a look at all the resources in the resource group we can see a Logic App and two Logic App API connectors. One for the Events and one for Log Analytics. There is also an [Event Grid System Topic](https://docs.microsoft.com/en-us/azure/event-grid/system-topics). 
+
+
 ![](src/17.png)
 
-Now we would like see it actually work. To test lets create a Live Event in Azure Media Services. For this test we create a RTMP Live Event and we are going to use ffmpeg to push a "live" stream based on a mp4 sample file. After the event is created you get the RTMP ingest URL. Copy this url over to the ffmpeg commandline below and add a unique name at the end like "mystream" for instance. Adjust the commandline to reflect your test source file and any other system varialbles.
+Now we would like see it actually work. To test let's create a Live Event in Azure Media Services. For this test we create a RTMP Live Event and we are going to use ffmpeg to push a "live" stream based on a mp4 sample file. After the event is created you get the RTMP ingest URL. Copy this url over to the ffmpeg commandline below and add a unique name at the end like "mystream" for instance. Adjust the commandline to reflect your test source file and any other system varialbles.
 ```
 ffmpeg -i bbb_sunflower_720p_25fps_encoded.mp4 -map 0 -c:v libx264 -c:a copy -f flv rtmp://amsevent-amseventdemo-euwe.channel.media.azure.net:1935/live/4b968cd6ac3e4ad68b539c2a38c6f8f3/mystream
 ```
