@@ -1,20 +1,29 @@
-# Azure Media Services Events to Azure Log Analytics
-## Store Azure Media Services Events in Azure Log Analytics
+# Tutorial: Store Azure Media Services Events in Azure Log Analytics
 
+In this tutorial you will learn how to store Azure Media Services events in Azure Log Analytics.
+> [!div class="checklist"]
+> * Create a no code Logic App Flow
+> * Subscribe to Azure Media Services Event Topics
+> * Parse Events and store to Azure Log Analytics
+> * Query Events from Azure Log Analytics
+
+If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
+
+## prerequisites:
+> * Azure Subscription
+> * AMS account already created
+> * Log Analytics Workspace already created
+
+## Azure Media Services Events
 Azure Media Services v3 emits events on [Azure Event Grid](https://docs.microsoft.com/en-us/azure/media-services/latest/media-services-event-schemas). You can subscribe to these events in many ways and store the events in various data stores. In this tutorial we will subscribe to these events using a [Log App Flow](https://azure.microsoft.com/en-us/services/logic-apps/). The Logic App will be triggered for each event and store the body of the event in Azure Log Analytics. Once the events are in [Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-create-workspace) we can use other Azure services to monitor, dashboard and alert on these events as desired by your own needs.
 
 For this tutorial we expect you already have an [Azure Media Services](https://docs.microsoft.com/en-us/azure/media-services/latest/create-account-howto) account. During the creation of the Logic App flow we also need to specify an Azure Log Analytics Workspace. 
-**Note: It is best you already set one up now using these simple steps: [Quick Create Workspace](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-create-workspace)**
-
-## prerequisites:
-* Azure Subscription
-* AMS account already created
-* Log Analytics Workspace already created
+**It is best you already set one up now using these simple steps: [Quick Create Workspace](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-create-workspace)**
 
 ## Walkthrough Steps
-![](src/01.png)
+![](src/01a.png)
 
-Navigate to your Azure Media Services account and click "Events" on the left hand side of the navigation pane. This will show all the various ways to subscribe to the Azure Media Services events.
+In the Azure portal, navigate to your Azure Media Services account and click "Events" on the left hand side in the navigation pane. This will show all the various ways to subscribe to the Azure Media Services events.
 
 
 ![](src/02.png)
@@ -176,4 +185,4 @@ You can click "See in query editor" to see the raw data of all fields.
 This is the output from the query where we see all the data of the event "MicrosoftMediaLiveEventEncoderConnected".
 
 ## Next steps:
-You can create different queries and save them. These can be added to Azure Dashboard. You can also use Log Analytics as a data store for other services like [Azure Monitor](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/get-started-portal)
+You can create different queries and save them. These can be added to [Azure Dashboard](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-logs-dashboards).
