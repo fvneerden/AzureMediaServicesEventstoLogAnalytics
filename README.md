@@ -1,11 +1,11 @@
 # Tutorial: Store Azure Media Services Events in Azure Log Analytics
 
 In this tutorial you will learn how to store Azure Media Services events in Azure Log Analytics.
-> [!div class="checklist"]
-> * Create a no code Logic App Flow
-> * Subscribe to Azure Media Services Event Topics
-> * Parse Events and store to Azure Log Analytics
-> * Query Events from Azure Log Analytics
+[!div class="checklist"]
+* Create a no code Logic App Flow
+* Subscribe to Azure Media Services Event Topics
+* Parse Events and store to Azure Log Analytics
+* Query Events from Azure Log Analytics
 
 If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
