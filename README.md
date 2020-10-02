@@ -48,8 +48,13 @@ In the "Resource Type" list locate "Microsoft.Media.MediaServices".
 
 ![Azure Media Services Event Type](src/06.png)
 
-In the "Event Type Item" there will be a list of all the events Azure Media Services emits. You can select the events you would like to track. You can add multiple event types. **Later we will make a small change to the Logic App flow to store each event type in a separate Log Analytics Log and propagate the Event Type name to the Log Analytics Log name dynamically.**
+In the "Event Type Item" there will be a list of all the events Azure Media Services emits. 
 
+You need to select the events you would like to track. You can add multiple event types but need to add each one individually here. **Later we will make a small change to the Logic App flow to store each event type in a separate Log Analytics Log and propagate the Event Type name to the Log Analytics Log name dynamically.**
+
+![Azure Log Analytics Data Collector](src/06b.png)
+
+If you selected multiple event types it should look like the picture above where I selected all the event types that relate to Live Streaming. You can change this list at any time by editing the Logic App Flow using the designer.
 
 ![Azure Log Analytics Data Collector](src/07.png)
 
